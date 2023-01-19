@@ -5,7 +5,8 @@
 Animal *AnimalFactory::get_animal(AnimalType type) {
   if (type == AnimalType::CAT) {
     return new Cat();
-  } else {
+  } else if (type == AnimalType::DOG) {
     return new Dog();
   }
+  return nullptr;
 }
